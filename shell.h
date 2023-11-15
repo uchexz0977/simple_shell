@@ -25,4 +25,6 @@ int execute_args(char **args);
 void execute_external_command(char *ptr_line, char **argv);
 void execute_command(char *ptr_line, char **argv);
 ssize_t my_getline(char **lineptr, size_t *n);
+int display_prompt(void);
+
 #endif /* SHELL_H */

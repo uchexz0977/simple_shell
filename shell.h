@@ -10,21 +10,10 @@
 #include <limits.h>
 
 #define BUFFER_SIZE 1024
-#define PROMPT "($) "
-
-
-extern char **environ;
-
-
-char **handle_arguments(char *input);
-void print_path(void);
-void print_directories(void);
-void if_command_exist(const char *command);
-void execute_command(char *ptr_line, char **argv);
-int execute_args(char **args);
-void execute_external_command(char *ptr_line, char **argv);
-void execute_command(char *ptr_line, char **argv);
-ssize_t my_getline(char **lineptr, size_t *n);
-int display_prompt(void);
+#define PROMPT "(my shell) $ "
+void display_prompt(const char *prompt);
+void printDir(void);
+void execute_command(char **argv);
+void execArgs(char** parsed);
 
 #endif /* SHELL_H */
